@@ -29,6 +29,10 @@ while True:
         df.drop(df.filter(regex="Unnamed: "), axis=1, inplace=True)
         func.calc_diff()
         func.calc_avg_speed(track_length)
+        df = pd.read_csv(filename)
+        df.drop(df.filter(regex="Unnamed: "), axis=1, inplace=True)
+        func.calc_diff()
+        func.calc_avg_speed(track_length)
         print(df)
         user_input = input('Write a command: ').upper()
     elif user_input == 'XLSX':
